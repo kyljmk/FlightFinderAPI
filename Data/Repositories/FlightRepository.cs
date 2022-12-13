@@ -33,6 +33,8 @@ public class FlightRepository : IFlightRepository
             .Select(f => new SearchResponse()
             {
                 Id = f.Id,
+                DepartureDestination = f.DepartureDestination,
+                ArrivalDestination = f.ArrivalDestination,
                 Itineraries = FilterItineraries(f.Itineraries, request, false)
             })
             .FirstAsync();
