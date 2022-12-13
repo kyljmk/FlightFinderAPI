@@ -18,9 +18,9 @@ public class FlightsController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<Flight>>> GetFlight()
+    public async Task<ActionResult<List<SearchResponse>>> GetFlight([FromQuery] SearchRequest request)
     {
-        var flights = await _repo.GetFlights();
+        var flights = await _repo.GetFlights(request);
 
         return Ok(flights);
     }

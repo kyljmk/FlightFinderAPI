@@ -4,5 +4,6 @@ namespace FlightFinderAPI.Data;
 
 public interface IFlightRepository
 {
-    Task<List<Flight>> GetFlights();
+    Task<List<Flight>> GetAllFlights();
+    Task<List<SearchResponse>> GetFlights(SearchRequest request);
 }

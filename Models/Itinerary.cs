@@ -10,5 +10,5 @@ public class Itinerary
     [DataType(DataType.Date)]
     public DateTime ArrivalTime { get; set; }
     public int AvailableSeats { get; set; }
-    public Prices Prices { get; set; }
+    public Prices? Prices { get; set; }
 }

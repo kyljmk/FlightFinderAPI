@@ -10,3 +10,9 @@ public class SearchRequest
     public int Adults { get; set; }
     public int Children { get; set; }
 }
+
+public class SearchResponse
+{
+    public string? Id { get; set; }
+    public List<Itinerary>? Itineraries { get; set; }
+}
